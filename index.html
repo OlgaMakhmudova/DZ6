@@ -11,9 +11,50 @@
 
 <body>
     <div class="wrapper">
-        <p>
-            HEllo World        
-        </p>
+        <!-- Шапка сайта. Класс Header -->
+        <header class="header">
+            <div class="logo"> <!-- Класс Logo, для блока логотипа. Название+ссылка+картинка -->
+                <h1 class="logo__title">
+                    <a class="logo__link" href="">
+                        <img class="logo__picture"
+                            src="../DZ6/images/png-transparent-travel-agent-tour-operator-akshar-tours-and-travels-hotel-travel-company-development-world.png" alt="">
+                        <p></p>
+                        <span class="logo__text">
+                            Tour For You
+                        </span>
+                    </a>
+                </h1>    
+            </div>  
+            <!-- Создаю пункты для меню, справа от логотипа, по формуле :
+                ul.menu>li.-item*5>a.-link[href="#"]{link$}|bem-->
+            <ul class="menu">
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        туры
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        страны
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        отели
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="../index.html" class="menu__link">
+                        контакты
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="../index.html" class="menu__link">
+                        вход / регистрация
+                    </a>
+                </li>
+            </ul>
+        </header>
     </div>
     
 </body>
