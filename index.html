@@ -28,37 +28,125 @@
                         </span>
                     </a>
                 </h1>    
-                <!-- Создаю пункты для меню, справа от логотипа, по формуле :
-                    ul.menu>li.-item*5>a.-link[href="#"]{link$}|bem-->
-                <ul class="menu">
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">
-                            туры
-                        </a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">
-                            страны
-                        </a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">
-                            отели
-                        </a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="../index.html" class="menu__link">
-                            контакты
-                        </a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="../index.html" class="menu__link">
-                            вход
-                        </a>
-                    </li>
-                </ul>
-            </div>  
+            </div>    
+            <!-- Создаю пункты для меню, справа от логотипа, по формуле :
+                ul.menu>li.-item*5>a.-link[href="#"]{link$}bem-->
+            <ul class="menu">
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        туры
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        страны
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        отели
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="../index.html" class="menu__link">
+                        контакты
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="../index.html" class="menu__link">
+                         вход
+                    </a>
+                </li>
+            </ul>
         </header>
+
+        <!-- Основная часть. Класс Main -->
+        <main class="main_general">
+            <aside class="aside__general"> <!-- боковой блок <aside>. Задаем/Выбираем параметры поиска -->
+                <form method="post" action="https://fom.in.ua/echo">
+                    <fieldset> <!-- Задаю элемент набора полей -->
+                        <legend>
+                            Выбор тура
+                        </legend>
+                        <p class="form__item">  <!--Добавляем формы, для выбора параметров поиска-->
+                            <form action="" class="form">
+                                <p>
+                                    <b>
+                                        Выезд из:
+                                    </b>
+                                </p> 
+                                <select name="departure" id="departure"> <!-- Список в котором может быть выбран один элемент -->
+                                    <option value="Country">Country</option>
+                                    <option value="Country">Country</option>
+                                    <option value="Country">Country</option>
+                                    <option value="Country">Country</option>
+                                    <option value="Country">Country</option>
+                                </select>
+                                <br><br>
+                                
+                                <p>
+                                    <b>Страна:</b>
+                                </p>   
+                                <select name="arrives" id="arrives"> <!-- Список в котором может быть выбран один элемент --> 
+                                    <option value="Country">Country</option>
+                                    <option value="Country">Country</option>
+                                    <option value="Country">Country</option>
+                                    <option value="Country">Country</option>
+                                    <option value="Country">Country</option>
+                                </select>
+                                <br><br>
+<!-- Найти календарь -->
+                                <p>
+                                    <b>Даты:</b>  
+                                </p> 
+                                <input type="number" name="Day" min="01" max="31" step="1" />
+                                <br><br>
+
+                                <p>
+                                    <b>Количество ночей</b>
+                                </p>   
+                                <select name="quantity_nights" id="nights"> <!--Список в котором может быть выбран один элемент-->
+                                    <option value="1-3">3 ночей</option>
+                                    <option value="1-7">7 ночей</option>
+                                    <option value="1-10">10 ночей</option>
+                                    <option value="1-14">14 ночей</option>
+                                </select>
+                                <br><br>
+
+                                <p>
+                                    <b>Количество взрослых</b>
+                                </p>   
+                                <select name="adult_man" id="adult_man"> <!--Список в котором может быть выбран один элемент-->
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                                <br><br>
+
+                                <p>
+                                    <b>Количество детей</b>
+                                </p>   
+                                <select name="adult_children" id="adult_children"> <!--Список в котором может быть выбран один элемент-->
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                                <br><br>
+                            <form>                              
+                            <br />
+                        </p>
+
+                        <p>
+                            <br />
+                            <!--Кнопка передающая данные на сайт-->
+                            <input type="submit" value="Подбор" />
+                        </p>
+                    </fieldset>
+                </form>
+            </aside>
+            
+        </main>
     </div>
     
 </body>
