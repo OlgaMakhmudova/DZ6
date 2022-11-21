@@ -22,7 +22,9 @@ body { /* параметры страницы */
     outline: 2px solid red;
 }
 
-.header {
+.header,
+.main_general,
+.aside__general {
     display: flex; /* Определяю flex-элементы*/
     flex-direction: row;  /* Устанавливаю главную ось - row горизонтальная */
     flex-wrap: wrap;
@@ -52,3 +54,25 @@ body { /* параметры страницы */
     text-decoration: underline overline #feb71f; /* Добавляю подчеркивание текста, при нажатии мышкой */
 }
 
+.aside__general {
+    width: 30%;
+}
+.section__general {
+    width: 70%;
+}
+
+.section__menu__item {
+    position: relative;
+    display: inline-block;
+    font-size: 1rem; /* Убираем пробелы между линками */
+    outline: 2px solid green;
+}
+.section__menu__item:hover .submenu {
+    display: block;
+}
+.submenu {
+    display: none;
+    position: absolute;
+    background: lime;
+    outline: 2px solid firebrick;
+}
