@@ -24,7 +24,9 @@ body { /* параметры страницы */
 
 .header,
 .main_general,
-.aside__general {
+.aside__general,
+.shop__wrap,
+.section__general {
     display: flex; /* Определяю flex-элементы*/
     flex-direction: row;  /* Устанавливаю главную ось - row горизонтальная */
     flex-wrap: wrap;
@@ -75,4 +77,10 @@ body { /* параметры страницы */
     position: absolute;
     background: lime;
     outline: 2px solid firebrick;
+}
+.section__submenu,
+.shop__wrap {
+    width: 95%;
+    justify-content: space-between;
+    align-items: center;
 }
