@@ -10,6 +10,10 @@
 </head>
 
 <body>
+    <!--Header 
+    Logo + Menu *5
+    asside (forms) section 
+    footer -->
     <div class="wrapper">
         <!-- Шапка сайта. Класс Header -->
         <header class="header">
@@ -24,36 +28,36 @@
                         </span>
                     </a>
                 </h1>    
+                <!-- Создаю пункты для меню, справа от логотипа, по формуле :
+                    ul.menu>li.-item*5>a.-link[href="#"]{link$}|bem-->
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            туры
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            страны
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">
+                            отели
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="../index.html" class="menu__link">
+                            контакты
+                        </a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="../index.html" class="menu__link">
+                            вход
+                        </a>
+                    </li>
+                </ul>
             </div>  
-            <!-- Создаю пункты для меню, справа от логотипа, по формуле :
-                ul.menu>li.-item*5>a.-link[href="#"]{link$}|bem-->
-            <ul class="menu">
-                <li class="menu__item">
-                    <a href="#" class="menu__link">
-                        туры
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a href="#" class="menu__link">
-                        страны
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a href="#" class="menu__link">
-                        отели
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a href="../index.html" class="menu__link">
-                        контакты
-                    </a>
-                </li>
-                <li class="menu__item">
-                    <a href="../index.html" class="menu__link">
-                        вход / регистрация
-                    </a>
-                </li>
-            </ul>
         </header>
     </div>
     

@@ -1,4 +1,54 @@
-p {
-    background-color: blue;
-    font-size: 2rem;
+/*  Дерево
+<div class="wrapper">
+    <header class="header">
+        <div class="logo">
+            <h1 class="logo__title">
+                <a class="logo__link" href="">
+                    <img class="logo__picture"
+                    <span class="logo__text">
+            <ul class="menu">
+                <li class="menu__item">
+                    <a href="#" class="menu__link"> *5
+
+/*01 */ 
+body { /* параметры страницы */
+    font-family: "Bookman Old Style", sans-serif; 
 }
+/* 10 */
+.wrapper { /* параметры класса container*/
+    width: 80%; /* ширина рабочей области */
+    margin: 0 auto; /* Внешний отступ от контента до границы - По умолчанию */
+    padding-right: 1%; /* Внутренний отступ от контента до границы. */
+    outline: 2px solid red;
+}
+
+.header {
+    display: flex; /* Определяю flex-элементы*/
+    flex-direction: row;  /* Устанавливаю главную ось - row горизонтальная */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 10 */
+.logo { /* Параметры блока logo */
+    width: 30%;
+}
+.menu {
+    width: 70%;
+}
+/* 10 */
+.logo__link,
+.menu__item {
+    text-transform: capitalize;  /* Задаю - Первый символ каждого слова в предложении будет заглавным */
+    text-decoration: none;
+    color: black;
+}
+.logo__picture {
+    width: 50%;
+}
+.logo__text:hover,
+.menu__link:hover {
+    text-decoration: underline overline #feb71f; /* Добавляю подчеркивание текста, при нажатии мышкой */
+}
+
