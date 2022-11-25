@@ -18,28 +18,51 @@ body { /* параметры страницы */
 .wrapper { /* параметры класса container*/
     width: 80%; /* ширина рабочей области */
     margin: 0 auto; /* Внешний отступ от контента до границы - По умолчанию */
-    padding-right: 1%; /* Внутренний отступ от контента до границы. */
+    padding: 2%; /* Внутренний отступ от контента до границы. */
     outline: 2px solid red;
 }
 
 .header,
+.logo,
 .main_general,
 .aside__general,
 .shop__wrap,
-.section__general {
+.section__general,
+.menu,
+.section__submenu {
     display: flex; /* Определяю flex-элементы*/
     flex-direction: row;  /* Устанавливаю главную ось - row горизонтальная */
     flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
 }
 
 /* 10 */
 .logo { /* Параметры блока logo */
-    width: 30%;
+    width: 15%;
+    outline: 2px solid blue;
+    padding: 1%; /* Внутренний отступ от контента до границы. */
+}
+.logo__title {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    outline: 2px solid aqua;
+}
+/* 10 */
+.logo__link {
+    padding-left: 5%;
+    outline: 2px solid red;
 }
 .menu {
-    width: 70%;
+    width: 85%;
+    justify-content: space-around;
+    outline: 2px solid aqua;
+}
+.section__submenu {
+    width: 100%;
+    justify-content: space-around;
+    outline: 2px solid aqua;
 }
 /* 10 */
 .logo__link,
@@ -47,26 +70,37 @@ body { /* параметры страницы */
     text-transform: capitalize;  /* Задаю - Первый символ каждого слова в предложении будет заглавным */
     text-decoration: none;
     color: black;
+    outline: 2px solid red;
 }
 .logo__picture {
-    width: 50%;
+    width: 30%;
+    display: block;
+    outline: 2px solid red;
 }
 .logo__text:hover,
 .menu__link:hover {
     text-decoration: underline overline #feb71f; /* Добавляю подчеркивание текста, при нажатии мышкой */
 }
-
+.main_general {
+    
+    outline: 2px solid red;
+}
 .aside__general {
-    width: 30%;
+    width: 15%;
+    padding: ;
+    outline: 2px solid maroon;
+    padding: 1%; /* Внутренний отступ от контента до границы. */
 }
 .section__general {
-    width: 70%;
+    width: 85%;
+    outline: 2px solid rgb(255, 0, 153);
+    justify-content: space-around;
 }
 
 .section__menu__item {
     position: relative;
     display: inline-block;
-    font-size: 1rem; /* Убираем пробелы между линками */
+    font-size: 1rem; /* Убираем пробелу между линками */
     outline: 2px solid green;
 }
 .section__menu__item:hover .submenu {
