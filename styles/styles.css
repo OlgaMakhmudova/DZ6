@@ -26,7 +26,7 @@ body { /* параметры страницы */
 .logo,
 .main_general,
 .aside__general,
-.shop__wrap,
+.offer__wrap,
 .section__general,
 .menu,
 .section__submenu {
@@ -54,17 +54,23 @@ body { /* параметры страницы */
     padding-left: 5%;
     outline: 2px solid red;
 }
+
+.logo__text {
+    outline: 2px solid red; 
+}
+
+.logo__picture {
+    width: 30%;
+    display: block;
+    outline: 2px solid red;
+}
+
 .menu {
     width: 85%;
     justify-content: space-around;
     outline: 2px solid aqua;
 }
-.section__submenu {
-    width: 100%;
-    justify-content: space-around;
-    outline: 2px solid aqua;
-}
-/* 10 */
+
 .logo__link,
 .menu__item {
     text-transform: capitalize;  /* Задаю - Первый символ каждого слова в предложении будет заглавным */
@@ -72,29 +78,47 @@ body { /* параметры страницы */
     color: black;
     outline: 2px solid red;
 }
-.logo__picture {
-    width: 30%;
-    display: block;
-    outline: 2px solid red;
-}
+
 .logo__text:hover,
 .menu__link:hover {
     text-decoration: underline overline #feb71f; /* Добавляю подчеркивание текста, при нажатии мышкой */
 }
+.section__submenu {
+    width: 100%;
+    justify-content: space-around;
+    outline: 2px solid aqua;
+}
+
+/* MAIN */
+/* 10 */
 .main_general {
-    
     outline: 2px solid red;
 }
+
+/* ASIDE */
 .aside__general {
     width: 15%;
-    padding: ;
+    padding: 2%;
     outline: 2px solid maroon;
     padding: 1%; /* Внутренний отступ от контента до границы. */
 }
+
+.form__item {
+    outline: 2px solid green;
+}
+
+/* SECTION */
 .section__general {
     width: 85%;
     outline: 2px solid rgb(255, 0, 153);
     justify-content: space-around;
+}
+
+.section__submenu,
+.offer__wrap {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .section__menu__item {
@@ -112,13 +136,21 @@ body { /* параметры страницы */
     background: lime;
     outline: 2px solid firebrick;
 }
-.section__submenu,
-.shop__wrap {
-    width: 95%;
-    justify-content: space-between;
-    align-items: center;
+
+.section__text {
+    width: 100%;
 }
 
-.shop__img {
-    width: 150px;
+.general__offer {
+    width: 100%;
+    outline: 2px solid aqua;
+
+}
+.offer__item {
+    width: 33%;
+    outline: 2px solid magenta;
+}
+
+.offer__main img {
+    width: 100%;
 }
