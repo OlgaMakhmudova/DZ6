@@ -118,3 +118,7 @@ body { /* параметры страницы */
     justify-content: space-between;
     align-items: center;
 }
+
+.shop__img {
+    width: 150px;
+}
