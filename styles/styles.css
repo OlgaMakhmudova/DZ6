@@ -1,25 +1,20 @@
-/*  Дерево
-<div class="wrapper">
-    <header class="header">
-        <div class="logo">
-            <h1 class="logo__title">
-                <a class="logo__link" href="">
-                    <img class="logo__picture"
-                    <span class="logo__text">
-            <ul class="menu">
-                <li class="menu__item">
-                    <a href="#" class="menu__link"> *5
-
-/*01 */ 
 body { /* параметры страницы */
-    font-family: "Bookman Old Style", sans-serif; 
+    font-family: "Bookman Old Style", sans-serif; /* Задаю шрифт */
+    background: url("../images/mountains-190055.jpg"); /* цвет заднего фона страницы */
+    background-repeat: no-repeat; /* указываю фон "без повтора" */
+    background-size: 100% 100%; /* указываю размеры фона */
 }
+
 /* 10 */
 .wrapper { /* параметры класса container*/
     width: 80%; /* ширина рабочей области */
     margin: 0 auto; /* Внешний отступ от контента до границы - По умолчанию */
-    padding: 2%; /* Внутренний отступ от контента до границы. */
-    outline: 2px solid red;
+    padding: 1.5%;  /* Внутренний отступ - Сверху top | Справа right | Снизу bottom | Слева left */
+    background-color:rgb(204, 238, 245);
+    border-radius: 2% 2%;
+    opacity: 0.6; /* Прозрачность фона и текста */
+    
+    position: relative;
 }
 
 .header,
@@ -33,19 +28,19 @@ body { /* параметры страницы */
     display: flex; /* Определяю flex-элементы*/
     flex-direction: row;  /* Устанавливаю главную ось - row горизонтальная */
     flex-wrap: wrap;
-    align-items: center;
+    align-items: start;
 }
 
 /* 10 */
 .logo { /* Параметры блока logo */
-    width: 15%;
+    width: 100%;
     outline: 2px solid blue;
     padding: 1%; /* Внутренний отступ от контента до границы. */
 }
 .logo__title {
     display: flex;
-    width: 100%;
-    justify-content: space-around;
+    width: 15%;
+    justify-content: space-between;
     align-items: center;
     outline: 2px solid aqua;
 }
@@ -60,14 +55,15 @@ body { /* параметры страницы */
 }
 
 .logo__picture {
-    width: 30%;
+    width: 20%;
     display: block;
     outline: 2px solid red;
 }
 
 .menu {
     width: 85%;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     outline: 2px solid aqua;
 }
 
@@ -85,7 +81,7 @@ body { /* параметры страницы */
 }
 .section__submenu {
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
     outline: 2px solid aqua;
 }
 
@@ -103,7 +99,7 @@ body { /* параметры страницы */
     padding: 1%; /* Внутренний отступ от контента до границы. */
 }
 
-.form__item {
+fieldset {
     outline: 2px solid green;
 }
 
@@ -122,7 +118,6 @@ body { /* параметры страницы */
 }
 
 .section__menu__item {
-    position: relative;
     display: inline-block;
     font-size: 1rem; /* Убираем пробелу между линками */
     outline: 2px solid green;
@@ -150,7 +145,28 @@ body { /* параметры страницы */
     width: 33%;
     outline: 2px solid magenta;
 }
-
-.offer__main img {
+.offer__item__hot {
     width: 100%;
+    outline: 2px solid blue;
+}
+
+.section__text img,
+.offer__main img,
+.offer__item__hot img {
+    width: 100%;
+}
+
+.anchor__link {
+    text-transform: uppercase;
+}
+.anchor__link {
+    position: fixed;
+    top: 80%;
+    left: 85%;
+    display: block;
+}
+.anchor__img {
+    /*background: white;*/
+    width: 23%;
+    /*opacity: 1; /* Прозрачность фона и текста */
 }

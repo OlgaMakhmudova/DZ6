@@ -1,0 +1,46 @@
+body { /*01 */
+    font-family: "Bookman Old Style", sans-serif; /* Задаю шрифт */
+    background: url("../images/1594986.jpg"); /* картинка заднего фона страницы */
+    background-repeat: no-repeat; /* указываю фон "без повтора" */
+    background-size: 100% 100%; /* указываю размеры фона */
+    text-decoration: none; /* Убираю подчеркивание у текста. Задаю тут, т.к. у body приоритетность меньше */
+    color: black;
+    outline: 2px solid red;
+
+}
+
+/* 10 */
+.wrapper { /* параметры класса container*/
+    width: 80%; /* ширина рабочей области */
+    margin: 0 auto; /* Внешний отступ от контента до границы - По умолчанию */
+    padding: 1.5%;  /* Внутренний отступ - Сверху top | Справа right | Снизу bottom | Слева left */
+    background-color:rgb(204, 238, 245);
+    border-radius: 2% 2%;
+    opacity: 0.7; /* Прозрачность фона и текста */
+    outline: 2px solid yellow;
+}
+.main__general {
+    display: flex; /* Определяю flex-элементы*/
+    flex-direction: row;  /* Устанавливаю главную ось - row горизонтальная */
+    flex-wrap: wrap; /* flex-элементы находятся внутри flex-контейнера, ячейки идут по порядку*/
+    justify-content: flex-start;
+    
+}
+.aside {
+    width: 15%;
+    padding: 1.5%;  
+}
+.aside__general {
+    outline: 2px solid green;
+}
+.section {
+    width: 60%;
+    padding: 1.5%;  
+    outline: 2px solid green;
+}
+.footer__general {
+    position: relative;
+    width: 100%;  /* Задаю ширину основной части страницы */   
+    padding-top: 1.5%;
+    padding-left: 2%;
+}
