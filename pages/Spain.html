@@ -4,338 +4,151 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Spain</title>
     <link rel="stylesheet" href="../styles/reset.css">
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
-
 <body>
     <div class="wrapper"> <!-- Шапка сайта. Класс Header -->
         <div class="anchor">
-            <a href="#top" class="anchor__link">
-                <img class="anchor__img" src="../images/5972786.png" alt="">
-            </a>
+            <a href="#top" class="anchor__link"><img class="anchor__img" src="../images/5972786.png" alt="up arrow"></a>
         </div>
         <header class="header">
-            <div class="logo"> <!-- Класс Logo, для блока логотипа. Название+ссылка+картинка -->
+            <div class="logo__header"> <!-- Класс Logo, для блока логотипа. Название+ссылка+картинка -->
                 <h1 class="logo__title">
-                    <a class="logo__link" href="../index.html">
-                        <img class="logo__picture" 
-                            src="../images/5333722.png" alt="">
-                        <span class="logo__text">
-                            Tour For You
-                        </span>
+                    <a class="logo__link" href="">
+                        <img class="logo__picture" src="../images/5333722.png" alt="Logo - Earth. Suitcase. Ticket">
+                        <span class="logo__text">Tour For You</span>
                     </a>
                 </h1>
                 <ul class="menu"> <!-- формула - ul.menu>li.-item*5>a.-link[href="#"]{link$}bem-->
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">туры</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">страны</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">отели</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">контакты</a>
-                    </li>
-                    <li class="menu__item">
-                        <a href="#" class="menu__link">вход</a>
-                    </li>
+                    <li class="menu__item"><a href="#" class="menu__link">туры</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">страны</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">отели</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">контакты</a></li>
+                    <li class="menu__item"><a href="#" class="menu__link">вход</a></li>
                 </ul>    
-            </div>    
-            
+            </div>   
         </header>
-        
         <main class="main_general"> <!-- Основная часть. Класс Main -->
             <aside class="aside__general"> <!-- блок <aside>. Задаем/Выбираем параметры поиска -->
                 <form method="post" action="https://fom.in.ua/echo">
                     <fieldset> <!-- Задаю элемент набора полей -->
-                        <legend>
-                            Выбор тура
-                        </legend>
+                        <legend>Выбор тура</legend>
                         <p class="form__item">  <!--Добавляем формы, для выбора параметров поиска-->
                             <form action="" class="form">
-                                <p><b>Выезд из:</b></p> 
+                                <p><b>Вылет из:</b></p> 
                                 <select name="form_departure" id="departure"> <!-- Список в котором может быть выбран один элемент -->
-                                    <option value="Odessa, Ukr">Одесса, Украина</option>
+                                    <option value="Odessa, Ukr">Одесса, <br><br>Украина</option>
                                     <option value="Kyiv, Ukr">Киев, Украина</option>
                                     <option value="Chisinau, Moldova">Кишинев, Молдавия</option>
-                                    <option value="Warsaw, Poland">Варшава, Польша</option>
-                                    <option value="Zilina, Slovakia">Жилина, Словакия</option>
-                                </select>
-                                <br><br>
-                                
+                                </select><br><br>
                                 <p><b>Страна:</b></p>   
                                 <select name="form__arrives" id="arrives"> <!-- Список в котором может быть выбран один элемент --> 
                                     <option value="Gudauri, Georgia">Гудаури, Грузия</option>
                                     <option value="Ankara, Turkey">Анкара, Турция</option>
                                     <option value="Burgas, Bulgaria">Бургас, Болгария</option>
-                                    <option value="Athens, Greece">Афины, Греция</option>
-                                    <option value="Maafaru, Maldives">Маафару, Мальдивы</option>
-                                </select>
-                                <br><br>
-
-                                <p><b>Даты:</b></p> 
-                                <!--
-                                    date - элемент для выбора даты. Отобржает всплывающий календарь.
-                                    Атрибуты min и max определяют диапазон допустимых дат.
-                                -->
-                                <input type="date" name="date" min="2022-12-01" max="2025-01-01" />
-                                <br><br>
-
+                                </select><br><br>
+                                <p><b>Дата вылета:</b></p> <!--date - элемент для выбора даты. Отображает всплывающий календарь. Атрибуты min и max определяют диапазон допустимых дат. -->
+                                <input type="date" name="date" min="2022-12-01" max="2025-01-01" /><br><br>
                                 <p><b>Количество ночей</b></p>   
                                 <select name="quantity_nights" id="nights"> <!--Список в котором может быть выбран один элемент-->
-                                    <option value="1-3">3 ночей</option>
                                     <option value="1-7">7 ночей</option>
                                     <option value="1-10">10 ночей</option>
                                     <option value="1-14">14 ночей</option>
-                                </select>
-                                <br><br>
-
+                                </select><br><br>
                                 <p><b>Количество взрослых</b></p>   
                                 <select name="adult_man" id="adult_man"> <!--Список в котором может быть выбран один элемент-->
                                     <option value="1">1</option>
                                     <option value="2">2</option>
-                                    <option value="3">3</option>
-                                </select>
-                                <br><br>
-
+                                </select><br><br>
                                 <p><b>Количество детей</b></p>   
                                 <select name="adult_children" id="adult_children"> <!--Список в котором может быть выбран один элемент-->
                                     <option value="0">0</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
-                                    <option value="3">3</option>
-                                </select>
-                                <br><br>
-                            <form>                              
-                            <br />
+                                </select><br><br>
+                            <form><br />
                         </p>
                         <p><br /><input type="submit" value="Подбор" /></p> <!--Кнопка передающая данные на сайт-->
                     </fieldset>
                 </form>
             </aside>
-
             <section class="section__general">
                 <div class="section__submenu">
                     <ul class="section__menu">
                         <li class="section__menu__item">
-                            <a href="" class="section__menu__link">Горы и лыжи</a>
-                            <!--ul.submenu>li.-item*4>a.-link{SubLink $}|bem-->
+                            <a href="" class="section__menu__link">Горы и лыжи</a>  <!--ul.submenu>li.-item*4>a.-link{SubLink $}|bem-->
                             <ul class="submenu">
-                                <li class="submenu__item">
-                                    <a href="#" class="submenu__link">Грузия</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#" class="submenu__link">Финляндия</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#" class="submenu__link">Андорра</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#" class="submenu__link">Италия</a>
-                                </li>
-                            </ul>
+                                <li class="submenu__item"><a href="#" class="submenu__link">Грузия</a></li>
+                                <li class="submenu__item"><a href="#" class="submenu__link">Финляндия</a></li>
+                                <li class="submenu__item"><a href="#" class="submenu__link">Андорра</a></ul>
                         </li>
                         <li class="section__menu__item">
-                            <a href="" class="section__menu__link">
-                                Отдых на море
-                            </a>
-                            <!--ul.submenu>li.-item*4>a.-link{SubLink $}|bem-->
+                            <a href="" class="section__menu__link">Отдых на море</a>   <!--ul.submenu>li.-item*4>a.-link{SubLink $}|bem-->
                             <ul class="submenu">
-                                <li class="submenu__item">
-                                    <a href="#" class="submenu__link">Турция</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#" class="submenu__link">Египет</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#" class="submenu__link">Мальдивы</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#" class="submenu__link">ОАЭ</a>
-                                </li>
-                            </ul>
+                                <li class="submenu__item"><a href="#" class="submenu__link">Турция</a></li>
+                                <li class="submenu__item"><a href="#" class="submenu__link">Египет</a></li>
+                                <li class="submenu__item"><a href="#" class="submenu__link">Мальдивы</a></li></ul>
                         </li>
                         <li class="section__menu__item">
-                            <a href="" class="section__menu__link">
-                                Активный отдых
-                            </a>
-                            <!--ul.submenu>li.-item*4>a.-link{SubLink $}|bem-->
+                            <a href="" class="section__menu__link">Активный отдых</a>   <!--ul.submenu>li.-item*4>a.-link{SubLink $}|bem-->
                             <ul class="submenu">
-                                <li class="submenu__item">
-                                    <a href="#" class="submenu__link">Шри-Ланка</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#" class="submenu__link">Вьетнам</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#" class="submenu__link">Индия</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#" class="submenu__link">Тайланд</a>
-                                </li>
-                            </ul>
+                                <li class="submenu__item"><a href="#" class="submenu__link">Шри-Ланка</a></li>
+                                <li class="submenu__item">a href="#" class="submenu__link">Вьетнам</a></li>
+                                <li class="submenu__item"><a href="#" class="submenu__link">Индия</a></li></ul>
                         </li>
                         <li class="section__menu__item">
-                            <a href="" class="section__menu__link">
-                                Экскурсионный отдых
-                            </a>
-                            <!--ul.submenu>li.-item*4>a.-link{SubLink $}|bem-->
+                            <a href="" class="section__menu__link">Экскурсионный отдых</a>   <!--ul.submenu>li.-item*4>a.-link{SubLink $}|bem-->
                             <ul class="submenu">
-                                <li class="submenu__item">
-                                    <a href="#" class="submenu__link">Страны Европы</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#" class="submenu__link">Сейшельские Острова</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#" class="submenu__link">Барбадос</a>
-                                </li>
-                                <li class="submenu__item">
-                                    <a href="#" class="submenu__link">Бермудские острова</a>
-                                </li>
-                            </ul>
+                                <li class="submenu__item"><a href="#" class="submenu__link">Страны Европы</a></li>
+                                <li class="submenu__item"><a href="#" class="submenu__link">Сейшельские Острова</a></li>
+                                <li class="submenu__item"><a href="#" class="submenu__link">Барбадос</a></li>
+                                <li class="submenu__item"><a href="#" class="submenu__link">Бермудские острова</a></li></ul>
                         </li>
                     </ul>
                 </div>
-
-                <div class="section__text">
-                    <br><br>
-                    <span>
-                        <h2 id="top">
-                            <span>
-                                Испания - это необычайная, великолепная страна.
-                            </span>
-                        </h2>
-                        <br>                       
-                        <img src="../images/Ispania.jpg" alt="ISpania" class="offer__img">
-                        <br><br>
+                <div class="section__text"><br><br>
+                    <span> 
+                        <h2 id="top" class="section__title"><span>Испания - это необычайная, великолепная страна.</span></h2><br>                       
+                        <img src="../images/Ispania.jpg" alt="ISpania" class="offer__img"><br><br>
                         Своеобразная культура, величественное зодчество, восхитительная природа и большой выбор различных видов отдыха. <br><br>Чистые как слеза заливы и желтая как солнце полоса пляжей притягивает к себе желающих поплавать в прозрачной воде Средиземного моря и полежать на песке под греющими лучами солнца. В Испании имеются около 2000 пляжей. Их суммарная длина стелется на тысячи километров вдоль береговой линии. Туристам предоставляется возможность насладиться отдыхом на белоснежном песке на курорте Коста-Бланка, который много раз получал награды соответствия пляжей всем нормам и правилам по европейским образцам. На курорте Коста Брава находится феноменальный морской пейзаж, где острые как бритва утесы великолепно выделяются с притягательными своей красотой заливами. Для туристов, желающих активно провести время, пляжах Ллорет де Мар будут предложены различные виды отдыха: взятие напрокат снаряжения для рыбалки или дайвинга. Пляж Родас, расположенный в Галисии, неоднократно получал звание самого лучшего пляжа не только Европы, но и всего мира. <br><br>Горные вершины Пиренеев предоставляют возможность всем желающим заняться зимними видами спорта, проведя отдых на горнолыжных курортных зонах Испании. Астун, Вальдескарай и Ла-Молина дадут отдыхающим уникальные условия для туризма: отличные отели и рестораны, лыжные дороги разнообразной сложности, школы, где учат лыжному катанию, парки для любителей сноуборда и многое другое. Бакейра-Берет считается курортом с самым высоким уровнем обслуживания. Одной из причин считается то, что сюда приезжают на отдых члены королевской семьи. <br><br>В Испании расположено великое множество термальных родников, имеющих удивительные лечебные свойства. Курорты Мурсия, Уэска, Жирона и Гранада, курорты славятся специальным лечением, позволяющим улучшить своё здоровье и скинуть несколько лет благодаря косметологическим процедурам. <br><br>Королевский дворец, расположенный в Мадриде является одним из самых больших в Европе. Он поражает роскошью Тронного зала и удивительной изящностью Фарфоровой комнаты. Там же расположены музей Prado, где находятся картины Рафаэля, Тициана и Эль Греко. На северо-востоке полуострова раскинулась Каталония. Её столицей является Барселона. Прогуливаясь по этому городу, можно заметить дюжины живых монументов, в которые ежедневно превращаются разукрашенные артисты. Приезжающие сюда люди с великим восхищением рассматривают Собор Святого Семейства, удивляющих туристов своим удивительным великолепием. Вечером Барселона заколдовывает чарующим видом поющих фонтанов. «Магический фонтан» показывают туристам удивительный танец, совмещающий в одно целое движение, свет и мелодии. На набережной находится самый крупный и великолепный аквариум в мире. В нем находится огромное множество тематических бассейнов. Именно здесь предоставляется возможность познакомиться с жителями морских глубин, прогулявшись внутри стеклянного туннеля. <br><br>На юге страны находится курорт Андалусия. Там расположено легендарное наследие мавританского государства. Город Севилье являлся столицей этой страны до XIII века. Одной из достопримечательностей здесь является собор Санта-Мария де ла Седе. На вершине его высотной башни Хиральды находится великая статуя, которая символизирует Христианство. Альгамбра - старинный дворец. Он является одним из величественных мест Гренады. Дворцовая композиция, состоящая из множества залов, украшенных утончённым орнаментом, удивляет гостей страны своей пышностью. В XVI веке в этом городе был воздвигнут Дворец Карла V. Сейчас здесь расположен Музей испано-мусульманского искусства. <br><br>На просторах Галисии, у берегов которой причаливали свои корабли жители Древней Римской Империи расположен Сантьяго-де-Компостела. Этот старинный город в течение многих веков служит целью странствий многих паломников, которые преодолевают большие расстояния, для того чтобы увидать величественно возвышающийся храм. <br><br>Испания необычайно обильна парками развлечений, где для детей раскрывается необычайные возможности для яркого отдыха и остаются незабываемые воспоминания. Один из таких мест называется «Магический остров». Находящийся в Севилье,  парк предлагает разного вида развлечения: водный спектакль, скоростные горки и многое другое. Знаменитая всем Майорка предлагает всем желающим прогуляться Драконовых пещерах. Там туристам открывается загадочный подземный мир.
                     </span>
                     <div class="offer__item__hot">
-                            <a href="#" class="offer__title">
-                                <p>
-                                    <br>
-                                    Заказать - Тур 10 дней
-                                </p>
-                            </a>
-                    </div>
-                    <br><br>
+                        <a href="#" class="offer__title"><p><br>Заказать - Тур 10 дней</p></a>
+                    </div><br><br>
                 </div>
-
                 <div class="general__offer"> <!-- Задаю параметры элементам --> 
-                    <span>
-                        Туры
-                    </span>
-                    <br><br>
+                    <span>Туры</span><br><br>
                     <div class="offer__wrap">
-                        <div class="offer__item">
-                            <header class="offer__header">
-                                <a href="#" class="offer__title">
-                                    Индонезия
-                                </a>
-                            </header>
-                            <div class="offer__main">
-                                <img src="./images/Indonesia.jpg" alt="Indonesia" class="offer__img">
+                        <h2 class="section__title"><span>Туры</span></h2><br><br>
+                        <div class="offer__wrap">
+                            <div class="offer__item">
+                                <div class="offer__main"> 
+                                    <img src="../images/Turkey.webp" alt="Turkey" class="offer__img">
+                                    <a href="#" class="offer__title">Турция - Тур 14 дней</a>
+                                </div>
                             </div>
-                            <footer class="offer__footer">
-                                <a href="#" class="offer__title">
-                                    Тур 10 дней
-                                </a>
-                            </footer>
-                        </div>
-                        <div class="offer__item">
-                            <header class="offer__header">
-                                <a href="#" class="offer__title">
-                                    Италия
-                                </a>
-                            </header>
-                            <div class="offer__main">
-                                <img src="./images/Italia.webp" alt="Italia" class="offer__img">
+                            <div class="offer__item">
+                                <div class="offer__main"> 
+                                    <img src="../images/georgia.jpg" alt="Georgia" class="offer__img">
+                                    <a href="#" class="offer__title">Грузия - Тур 7 дней</a>
+                                </div>
                             </div>
-                            <footer class="offer__footer">
-                                <a href="#" class="offer__title">
-                                    Тур 10 дней
-                                </a>
-                            </footer>
-                        </div>
-                        <div class="offer__item">
-                            <header class="offer__header">
-                                <a href="#" class="offer__title">
-                                    Мехико
-                                </a>
-                            </header>
-                            <div class="offer__main">
-                                <img src="./images/mexiko.jpg" alt="Mexico" class="offer__img">
+                            <div class="offer__item">
+                                <div class="offer__main"> 
+                                    <img src="../images/Greece.jpg" alt="Greece" class="offer__img">
+                                    <a href="#" class="offer__title">Греция - Тур 10 дней</a>
+                                </div>
                             </div>
-                            <footer class="offer__footer">
-                                <a href="#" class="offer__title">
-                                    Тур 14 дней
-                                </a>
-                            </footer>
-                        </div>
-                        <div class="offer__item">
-                            <header class="offer__header">
-                                <a href="#" class="offer__title">
-                                    Турция
-                                </a>
-                            </header>
-                            <div class="offer__main">
-                                <img src="./images/Turkey.jpg" alt="Turkey" class="offer__img">
-                            </div>
-                            <footer class="offer__footer">
-                                <a href="#" class="offer__title">
-                                    Тур 14 дней
-                                </a>
-                            </footer>
-                        </div>
-                        <div class="offer__item">
-                            <header class="offer__header">
-                                <a href="#" class="offer__title">
-                                    Грузия
-                                </a>
-                            </header>
-                            <div class="offer__main">
-                                <img src="./images/georgia.jpg" alt="Turkey" class="offer__img">
-                            </div>
-                            <footer class="offer__footer">
-                                <a href="#" class="offer__title">
-                                    Тур 7 дней
-                                </a>
-                            </footer>
-                        </div>
-                        <div class="offer__item">
-                            <header class="offer__header">
-                                <a href="#" class="offer__title">
-                                    Греция
-                                </a>
-                            </header>
-                            <div class="offer__main">
-                                <img src="./images/Greece.jpg" alt="Greece" class="offer__img">
-                            </div>
-                            <footer class="offer__footer">
-                                <a href="#" class="offer__title">
-                                    Тур 10 дней
-                                </a>
-                            </footer>
                         </div>
                     </div>
                 </div>
             </section>
-            <footer class="footer__general"><!-- <footer> - нижняя часть страницы -->
-                <hr></hr> <!-- Добавляю линию над текстом -->
-                <p>
-                    <span class="footer__text"> <!--Класс footer_текст-->                
-                        Copyright &copy; 2022 | All rights reserved
-                    </span>
-                </p>
-                <br />
-            </footer>
         </main>
+        <footer class="footer__general"><!-- <footer> - нижняя часть страницы -->
+            <hr></hr><span class="footer__text">Copyright &copy; 2022 | All rights reserved</span>
+        </footer>
     </div>
 </body>
-
 </html>

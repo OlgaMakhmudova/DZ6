@@ -1,172 +1,82 @@
-body { /* параметры страницы */
-    font-family: "Bookman Old Style", sans-serif; /* Задаю шрифт */
+body { /* 01 */  /* параметры страницы */
     background: url("../images/mountains-190055.jpg"); /* цвет заднего фона страницы */
     background-repeat: no-repeat; /* указываю фон "без повтора" */
     background-size: 100% 100%; /* указываю размеры фона */
-}
-
-/* 10 */
-.wrapper { /* параметры класса container*/
+    text-decoration: none;
+    color: black; }
+.wrapper, .footer__general { /* 10 */  /* параметры класса container*/
     width: 80%; /* ширина рабочей области */
     margin: 0 auto; /* Внешний отступ от контента до границы - По умолчанию */
     padding: 1.5%;  /* Внутренний отступ - Сверху top | Справа right | Снизу bottom | Слева left */
     background-color:rgb(204, 238, 245);
     border-radius: 2% 2%;
     opacity: 0.6; /* Прозрачность фона и текста */
-    
-    position: relative;
-}
-
-.header,
-.logo,
-.main_general,
-.aside__general,
-.offer__wrap,
-.section__general,
-.menu,
-.section__submenu {
+    position: relative; }
+/* 10 */
+.header, .logo__header, .logo__title, .main_general, .aside__general, .offer__wrap, .section__general, .menu, .section__submenu {
     display: flex; /* Определяю flex-элементы*/
     flex-direction: row;  /* Устанавливаю главную ось - row горизонтальная */
-    flex-wrap: wrap;
-    align-items: start;
-}
-
-/* 10 */
-.logo { /* Параметры блока logo */
+    flex-wrap: wrap; }
+.logo__header { /* 10 */  /* Параметры блока logo */
     width: 100%;
-    outline: 2px solid blue;
-    padding: 1%; /* Внутренний отступ от контента до границы. */
-}
-.logo__title {
-    display: flex;
-    width: 15%;
-    justify-content: space-between;
-    align-items: center;
-    outline: 2px solid aqua;
-}
-/* 10 */
-.logo__link {
-    padding-left: 5%;
-    outline: 2px solid red;
-}
-
-.logo__text {
-    outline: 2px solid red; 
-}
-
-.logo__picture {
+    padding: 1%; }
+.logo__title { /* 10 */
+    width: 17%; }
+.logo__link, .logo__text, .menu, .footer__general { /* 10 */
+    align-items: center; }
+.logo__link { /* 10 */
+    justify-content: start;
+    padding-left: 5%; }
+.logo__text { /* 10 */
+    justify-content: start; }
+.logo__picture { /* 10 */
     width: 20%;
-    display: block;
-    outline: 2px solid red;
-}
-
-.menu {
-    width: 85%;
-    justify-content: space-between;
-    align-items: center;
-    outline: 2px solid aqua;
-}
-
-.logo__link,
-.menu__item {
-    text-transform: capitalize;  /* Задаю - Первый символ каждого слова в предложении будет заглавным */
-    text-decoration: none;
-    color: black;
-    outline: 2px solid red;
-}
-
-.logo__text:hover,
-.menu__link:hover {
-    text-decoration: underline overline #feb71f; /* Добавляю подчеркивание текста, при нажатии мышкой */
-}
+    display: block; }
+.menu { /* 10 */
+    width: 83%;
+    justify-content: space-around; }
+.logo__link, .menu__item { /* 10 */
+    text-transform: capitalize; }  /* Задаю - Первый символ каждого слова в предложении будет заглавным */
+.logo__text:hover, .menu__link:hover {
+    text-decoration: underline overline #feb71f; } /* Добавляю подчеркивание текста, при нажатии мышкой */
 .section__submenu {
     width: 100%;
-    justify-content: space-between;
-    outline: 2px solid aqua;
-}
-
-/* MAIN */
-/* 10 */
-.main_general {
-    outline: 2px solid red;
-}
-
-/* ASIDE */
-.aside__general {
-    width: 15%;
-    padding: 2%;
-    outline: 2px solid maroon;
+    justify-content: space-between; }
+.aside__general { /* 10 */  /* ASIDE */
+    align-items: start;
+    width: 17%;
     padding: 1%; /* Внутренний отступ от контента до границы. */
-}
-
-fieldset {
-    outline: 2px solid green;
-}
-
-/* SECTION */
-.section__general {
-    width: 85%;
-    outline: 2px solid rgb(255, 0, 153);
-    justify-content: space-around;
-}
-
-.section__submenu,
-.offer__wrap {
+    background-color:rgb(122, 218, 237); }
+.section__general { /* 10 */ /* SECTION */
+    width: 83%;
+    padding: 1.5%;
+    justify-content: space-around; }
+.section__submenu, .offer__wrap {
     width: 100%;
     justify-content: space-between;
-    align-items: center;
-}
-
+    align-items: center; }
 .section__menu__item {
     display: inline-block;
-    font-size: 1rem; /* Убираем пробелу между линками */
-    outline: 2px solid green;
-}
+    font-size: 1rem; } /* Убираем пробелу между линками */
 .section__menu__item:hover .submenu {
-    display: block;
-}
+    display: block; }
 .submenu {
     display: none;
     position: absolute;
-    background: lime;
-    outline: 2px solid firebrick;
-}
-
-.section__text {
-    width: 100%;
-}
-
+    background-color:rgb(122, 218, 237); }
 .general__offer {
-    width: 100%;
-    outline: 2px solid aqua;
-
-}
+    width: 100%; }
 .offer__item {
-    width: 33%;
-    outline: 2px solid magenta;
-}
+    width: 33%; }
 .offer__item__hot {
-    width: 100%;
-    outline: 2px solid blue;
-}
-
-.section__text img,
-.offer__main img,
-.offer__item__hot img {
-    width: 100%;
-}
-
+    width: 100%; }
+.section__text img, .offer__main img, .offer__item__hot img {
+    width: 100%; }
 .anchor__link {
     text-transform: uppercase;
-}
-.anchor__link {
     position: fixed;
     top: 80%;
     left: 85%;
-    display: block;
-}
+    display: block; }
 .anchor__img {
-    /*background: white;*/
-    width: 23%;
-    /*opacity: 1; /* Прозрачность фона и текста */
-}
+    width: 23%; }
