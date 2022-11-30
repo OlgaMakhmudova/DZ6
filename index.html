@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tourism</title>
-    <link rel="stylesheet" href="../DZ6/styles/reset.css">
-    <link rel="stylesheet" href="../DZ6/styles/styles.css">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
     <div class="wrapper"> <!-- Шапка сайта. Класс Header -->
@@ -14,134 +14,122 @@
             <div class="logo__header"> <!-- Класс Logo, для блока логотипа. Название+ссылка+картинка -->
                 <h1 class="logo__title">
                     <a class="logo__link" href="">
-                        <img class="logo__picture" src="../DZ6/images/5333722.png" alt="Logo - Earth. Suitcase. Ticket">
+                        <img class="logo__picture" src="./images/5333722.png" alt="Logo - Earth. Suitcase. Ticket">
                         <span class="logo__text">Tour For You</span></a>
                 </h1>
-                <ul class="menu"> <!-- формула - ul.menu>li.-item*5>a.-link[href="#"]{link$}bem-->
+                <ul class="menu"> <!-- Пункты меню класса logo__header. По формуле - ul.menu>li.-item*5>a.-link[href="#"]{link$}bem-->
                     <li class="menu__item"><a href="#" class="menu__link">туры</a></li>
                     <li class="menu__item"><a href="#" class="menu__link">страны</a></li>
                     <li class="menu__item"><a href="#" class="menu__link">отели</a></li>
                     <li class="menu__item"><a href="#" class="menu__link">контакты</a></li>
-                    <li class="menu__item"><a href="#" class="menu__link">вход</a></li>
-                </ul>    
+                    <li class="menu__item"><a href="#" class="menu__link">вход</a></li></ul>
             </div>   
-        </header>
+        </header><hr></hr>
         <main class="main_general"> <!-- Основная часть. Класс Main -->
             <aside class="aside__general"> <!-- блок <aside>. Задаем/Выбираем параметры поиска -->
                 <form method="post" action="https://fom.in.ua/echo">
                     <fieldset> <!-- Задаю элемент набора полей -->
-                        <legend>Выбор тура</legend>
-                        <p class="form__item">  <!--Добавляем формы, для выбора параметров поиска-->
-                            <form action="" class="form">
-                                <p><b>Вылет из:</b></p> 
-                                <select name="form_departure" id="departure"> <!-- Список в котором может быть выбран один элемент -->
-                                    <option value="Odessa, Ukr">Одесса, <br><br>Украина</option>
+                        <legend>Выбор тура</legend> <!-- Называю элемент набора полей -->
+                        <p class="form__item">
+                            <form class="form__elements"> <!--Добавляю формы, для выбора параметров поиска-->
+                                <p>Вылет из:</p>
+                                <p><select name="form_departure" id="departure"> <!-- Список в котором может быть выбран один элемент -->
+                                    <option value="Odessa, Ukr">Одесса, Украина</option>
                                     <option value="Kyiv, Ukr">Киев, Украина</option>
-                                    <option value="Chisinau, Moldova">Кишинев, Молдавия</option>
-                                </select><br><br>
-                                <p><b>Страна:</b></p>   
-                                <select name="form__arrives" id="arrives"> <!-- Список в котором может быть выбран один элемент --> 
+                                    <option value="Chisinau, Moldova">Кишинев, Молдова</option></select></p>
+                                <p>Страна:</p> 
+                                <p><select name="form__arrives" id="arrives"> <!-- Список в котором может быть выбран один элемент --> 
+                                    <option value="Reus, Spain">Реус, Испания</option>
                                     <option value="Gudauri, Georgia">Гудаури, Грузия</option>
-                                    <option value="Ankara, Turkey">Анкара, Турция</option>
                                     <option value="Burgas, Bulgaria">Бургас, Болгария</option>
-                                </select><br><br>
-                                <p><b>Дата вылета:</b></p> <!--date - элемент для выбора даты. Отображает всплывающий календарь. Атрибуты min и max определяют диапазон допустимых дат. -->
-                                <input type="date" name="date" min="2022-12-01" max="2025-01-01" /><br><br>
-                                <p><b>Количество ночей</b></p>   
-                                <select name="quantity_nights" id="nights"> <!--Список в котором может быть выбран один элемент-->
+                                    <option value="Istanbul, Turkey">Стамбул, Турция</option>
+                                    <option value="Athens, Greece">Афины, Греция</option>
+                                    <option value="Prague, Czech Republic">Прага, Чехия</option>
+                                    <option value="Warsaw, Poland">Варшава, Польша</option></select></p>
+                                <p>Дата вылета:</p>
+                                <p><input type="date" name="date" min="2022-12-01" max="2025-01-01"></p> <!--date - элемент для выбора даты. Отображает всплывающий календарь. Атрибуты min и max определяют диапазон допустимых дат. -->
+                                <p>Количество ночей</p>   
+                                <p><select name="quantity_nights" id="nights"> <!--Список в котором может быть выбран один элемент-->
                                     <option value="1-7">7 ночей</option>
                                     <option value="1-10">10 ночей</option>
-                                    <option value="1-14">14 ночей</option>
-                                </select><br><br>
-                                <p><b>Количество взрослых</b></p>   
-                                <select name="adult_man" id="adult_man"> <!--Список в котором может быть выбран один элемент-->
+                                    <option value="1-14">14 ночей</option></select></p>
+                                <p>Количество взрослых</p>   
+                                <p><select name="adult_man" id="adult_man"> <!--Список в котором может быть выбран один элемент-->
                                     <option value="1">1</option>
-                                    <option value="2">2</option>
-                                </select><br><br>
-                                <p><b>Количество детей</b></p>   
-                                <select name="adult_children" id="adult_children"> <!--Список в котором может быть выбран один элемент-->
+                                    <option value="2">2</option></select></p>
+                                <p>Количество детей</p>   
+                                <p><select name="adult_children" id="adult_children"> <!--Список в котором может быть выбран один элемент-->
                                     <option value="0">0</option>
                                     <option value="1">1</option>
-                                    <option value="2">2</option>
-                                </select><br><br>
-                            <form><br /></p>
-                        <p><br /><input type="submit" value="Подбор" /></p> <!--Кнопка передающая данные на сайт-->
+                                    <option value="2">2</option></select></p>
+                            <form></p>
+                        <p><button class="flat"><input type="submit" value="Выбрать тур"></p></button>   <!--Кнопка передающая данные на сайт-->
                     </fieldset>
                 </form>
             </aside>
-            <section class="section__general">
+            <section class="section__general"> <!-- блок <section> -->
                 <div class="section__submenu">
                     <ul class="section__menu">
-                        <li class="section__menu__item">
+                        <li class="section__menu__item"> <!-- Добавляю Выпадающее меню. Задаю пункты меню   -->
                             <a href="" class="section__menu__link">Горы и лыжи</a>  <!--ul.submenu>li.-item*4>a.-link{SubLink $}|bem-->
                             <ul class="submenu">
                                 <li class="submenu__item"><a href="#" class="submenu__link">Грузия</a></li>
-                                <li class="submenu__item"><a href="#" class="submenu__link">Финляндия</a></li>
-                                <li class="submenu__item"><a href="#" class="submenu__link">Андорра</a></li>
-                            </ul>
+                                <li class="submenu__item"><a href="#" class="submenu__link">Турция</a></li></ul>
                         </li>
-                        <li class="section__menu__item">
+                        <li class="section__menu__item"> <!-- Добавляю Выпадающее меню. Задаю пункты меню   -->
                             <a href="" class="section__menu__link">Отдых на море</a>   <!--ul.submenu>li.-item*4>a.-link{SubLink $}|bem-->
                             <ul class="submenu">
-                                <li class="submenu__item"><a href="#" class="submenu__link">Турция</a></li>
-                                <li class="submenu__item"><a href="#" class="submenu__link">Египет</a></li>
-                                <li class="submenu__item"><a href="#" class="submenu__link">Мальдивы</a></li>
-                            </ul>
+                                <li class="submenu__item"><a href="#" class="submenu__link">Греция</a></li>
+                                <li class="submenu__item"><a href="#" class="submenu__link">Испания</a></li></ul>
                         </li>
-                        <li class="section__menu__item">
+                        <li class="section__menu__item"> <!-- Добавляю Выпадающее меню. Задаю пункты меню   -->
                             <a href="" class="section__menu__link">Активный отдых</a>   <!--ul.submenu>li.-item*4>a.-link{SubLink $}|bem-->
                             <ul class="submenu">
-                                <li class="submenu__item"><a href="#" class="submenu__link">Шри-Ланка</a></li>
-                                <li class="submenu__item"><a href="#" class="submenu__link">Вьетнам</a></li>
-                                <li class="submenu__item"><a href="#" class="submenu__link">Индия</a></li>
-                            </ul>
+                                <li class="submenu__item"><a href="#" class="submenu__link">Грузия</a></li>
+                                <li class="submenu__item"><a href="#" class="submenu__link">Болгария</a></li></ul>
                         </li>
-                        <li class="section__menu__item">
-                            <a href="" class="section__menu__link">Экскурсионный отдых</a>   <!--ul.submenu>li.-item*4>a.-link{SubLink $}|bem-->
+                        <li class="section__menu__item"> <!-- Добавляю Выпадающее меню. Задаю пункты меню   -->
+                            <a href="" class="section__menu__link">Экскурсии</a>   <!--ul.submenu>li.-item*4>a.-link{SubLink $}|bem-->
                             <ul class="submenu">
-                                <li class="submenu__item"><a href="#" class="submenu__link">Страны Европы</a></li>
-                                <li class="submenu__item"><a href="#" class="submenu__link">Сейшельские Острова</a></li>
-                                <li class="submenu__item"><a href="#" class="submenu__link">Барбадос</a></li>
-                                <li class="submenu__item"><a href="#" class="submenu__link">Бермудские острова</a></li>
-                            </ul>
+                                <li class="submenu__item"><a href="#" class="submenu__link">Чехия</a></li>
+                                <li class="submenu__item"><a href="#" class="submenu__link">Польша</a></li></ul>
                         </li>
                     </ul>
                 </div>
-                <div class="section__text"><br><br>
-                    <h2 class="section__title"><span>Горячее предложение - Испания</span></h2><br><br>
+                <div class="section__text"><p></p>  <!-- Добавляю Заголовок, отделяя "блоки" основной части   -->
+                    <p><h2 class="section__title"><span>🔥 Горячее предложение - Испания 🔥</span></h2></p>
                     <div class="offer__item__hot">
-                        <a href="./pages/Spain.html" class="offer__title">
-                            <p><img src="./images/Ispania.jpg" alt="Ispania" class="offer__img"><br>Испания - Тур 10 дней</p>
-                        </a>
-                    </div><br><br>
+                        <a href="./pages/spain.html" class="offer__title">
+                            <p>Испания - Тур 10 дней</p><p></p><img src="./images/Ispania.jpg" alt="Ispania" class="offer__img"></p></a>
+                    </div>
                 </div>
-                <div class="general__offer"> <!-- Задаю параметры элементам --> 
-                    <h2 class="section__title"><span>Туры</span></h2><br><br>
+                <div class="general__offer"> <!-- Добавляю еще несколько предложений, с ссылкой и картинкой --> 
+                    <p><h2 class="section__title"><span>Индивидуальные туры</span></h2></p>
                     <div class="offer__wrap">
                         <div class="offer__item">
-                            <div class="offer__main"> 
-                                <img src="./images/Indonesia.jpg" alt="Indonesia" class="offer__img">
-                                <a href="#" class="offer__title">Индонезия - Тур 10 дней</a>
+                            <div class="offer__main">
+                                <a href="#" class="offer__title">
+                                    <img src="./images/Indonesia.jpg" alt="Indonesia" class="offer__img">Индонезия - Тур 10 дней</a>
                             </div>
                         </div>
                         <div class="offer__item">
                             <div class="offer__main">
-                                <img src="./images/Italia.webp" alt="Italia" class="offer__img">
-                                <a href="#" class="offer__title">Италия - Тур 10 дней</a>
+                                <a href="#" class="offer__title">
+                                    <img src="./images/Italy.jpg" alt="Italia" class="offer__img">Италия - Тур 10 дней</a>
                             </div>
                         </div>
                         <div class="offer__item">
                             <div class="offer__main">
-                                <img src="./images/mexiko.jpg" alt="Mexico" class="offer__img">
-                                <a href="#" class="offer__title">Мехико - Тур 14 дней</a>
+                                <a href="#" class="offer__title">
+                                    <img src="./images/mexiko.jpg" alt="Mexico" class="offer__img">Мехико - Тур 14 дней</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-        </main>
+        </main><hr></hr> <!-- Добавляю линию над текстом -->
         <footer class="footer__general"><!-- <footer> - нижняя часть страницы -->
-            <hr></hr><span class="footer__text">Copyright &copy; 2022 | All rights reserved</span>  <!-- Добавляю линию над текстом -->
+            <span class="footer__text">Copyright &copy; 2022 | All rights reserved</span> 
         </footer>
     </div>
 </body>

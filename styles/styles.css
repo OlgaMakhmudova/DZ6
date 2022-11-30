@@ -1,10 +1,8 @@
 body { /* 01 */  /* параметры страницы */
     background: url("../images/mountains-190055.jpg"); /* цвет заднего фона страницы */
     background-repeat: no-repeat; /* указываю фон "без повтора" */
-    background-size: 100% 100%; /* указываю размеры фона */
-    text-decoration: none;
-    color: black; }
-.wrapper, .footer__general { /* 10 */  /* параметры класса container*/
+    background-size: 100% 100%; /* указываю размеры фона */ }
+.wrapper { /* 10 */  /* параметры класса container*/
     width: 80%; /* ширина рабочей области */
     margin: 0 auto; /* Внешний отступ от контента до границы - По умолчанию */
     padding: 1.5%;  /* Внутренний отступ - Сверху top | Справа right | Снизу bottom | Слева left */
@@ -13,13 +11,14 @@ body { /* 01 */  /* параметры страницы */
     opacity: 0.6; /* Прозрачность фона и текста */
     position: relative; }
 /* 10 */
-.header, .logo__header, .logo__title, .main_general, .aside__general, .offer__wrap, .section__general, .menu, .section__submenu {
+.header, .logo__header, .logo__title, .main_general, .aside__general, .offer__wrap, .section__general, .menu, .section__menu {
     display: flex; /* Определяю flex-элементы*/
     flex-direction: row;  /* Устанавливаю главную ось - row горизонтальная */
     flex-wrap: wrap; }
 .logo__header { /* 10 */  /* Параметры блока logo */
     width: 100%;
-    padding: 1%; }
+    padding: 1%;
+    background-color:rgb(122, 218, 237); }
 .logo__title { /* 10 */
     width: 17%; }
 .logo__link, .logo__text, .menu, .footer__general { /* 10 */
@@ -32,21 +31,38 @@ body { /* 01 */  /* параметры страницы */
 .logo__picture { /* 10 */
     width: 20%;
     display: block; }
+p {
+    padding: 5px 0 3px 0; }  /* Внутренний отступ Сверху top | Справа right | Снизу bottom | Слева left */
+h2 {
+    padding: 20px 0 20px 0;  /* Внутренний отступ Сверху top | Справа right | Снизу bottom | Слева left */
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(255, 0, 51);
+    border: 2px solid blue;
+    font-weight: bold; }
+hr {
+    border: 1px solid blue; } 
 .menu { /* 10 */
     width: 83%;
     justify-content: space-around; }
 .logo__link, .menu__item { /* 10 */
     text-transform: capitalize; }  /* Задаю - Первый символ каждого слова в предложении будет заглавным */
-.logo__text:hover, .menu__link:hover {
+.logo__text, .menu__link, .section__menu__link, .logo__link, .offer__title, .submenu__link {
+    text-decoration: none;
+    color: black; } /* Добавляю подчеркивание текста, при нажатии мышкой */
+.logo__text:hover, .menu__link:hover, .section__menu__link:hover, .logo__link:hover, .offer__title:hover, .submenu__link:hover {
     text-decoration: underline overline #feb71f; } /* Добавляю подчеркивание текста, при нажатии мышкой */
-.section__submenu {
+.section__menu {
     width: 100%;
-    justify-content: space-between; }
+    justify-content: space-around; }
 .aside__general { /* 10 */  /* ASIDE */
     align-items: start;
     width: 17%;
     padding: 1%; /* Внутренний отступ от контента до границы. */
     background-color:rgb(122, 218, 237); }
+.flat, fieldset {
+    border: 2px solid blue; /* Параметры рамки */
+    padding: .2em .2em; } /* Поля вокруг текста */
 .section__general { /* 10 */ /* SECTION */
     width: 83%;
     padding: 1.5%;
@@ -80,3 +96,5 @@ body { /* 01 */  /* параметры страницы */
     display: block; }
 .anchor__img {
     width: 23%; }
+.footer__general {
+    justify-content: center; }

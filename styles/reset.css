@@ -1,6 +1,4 @@
-*,  /* RESET */
-*::before,
-*::after {
+*, *::before, *::after {   /* RESET */
     margin: 0;
     padding: 0;
     border: 0;
@@ -8,15 +6,11 @@
     font: inherit;
     vertical-align: baseline;
     box-sizing: border-box;
-	font-family: 'Roboto', sans-serif;
-}
+	font-family: 'Roboto', sans-serif; }
 html {
-    font-size: 16px;
-}
+    font-size: 16px; }
 body {
     font-size: 1rem;
-	line-height: 1;
-}
+	line-height: 1; }
 ol, ul {
-	list-style: none;
-}
+	list-style: none; }
